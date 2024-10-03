@@ -31,7 +31,7 @@ To map the images from the depth estimation set to the 3D object detection one, 
 Since we are interested in evaluating the objects depth we use the 3D Object Detection labels. 
 
 [KITTI Depth Estimation Dataset](https://www.cvlibs.net/datasets/kitti/eval_depth_all.php) \
-[KITTI 3D Object Detection Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d)
+[KITTI 3D Object Detection Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) \
 $$
 \textbf{KITTI Depth Estimation Dataset:} \\
 \text{Training Set: } D_{\text{train}} = 85898 \text{ Images}\\
