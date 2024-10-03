@@ -8,7 +8,7 @@ title: Rerun Web Viewer
 This page displays a live Rerun web viewer that is running on a server.
 
 <!-- Embed the Rerun viewer using an iframe -->
-<iframe src="192.168.56.1:9877" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="192.168.56.1:9876" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
 
 > Make sure the Rerun server is running and accessible at the provided URL.
 
