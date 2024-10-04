@@ -55,9 +55,9 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 <table>
   <tr>
-    <td><img src="Figures/FVObjectErrorDistribution.png" width="400"/></td>
-    <td><img src="Figures/FVMeanErrorVsGT.png" width="400"/></td>
-    <td><img src="Figures/FVHist.png" width="400"/></td>
+    <td><img src="Figures/FVObjectErrorDistribution.png" width="500"/></td>
+    <td><img src="Figures/FVMeanErrorVsGT.png" width="500"/></td>
+    <td><img src="Figures/FVHist.png" width="500"/></td>
   </tr>
 </table>
 
@@ -74,6 +74,7 @@ As described in the [paper](https://arxiv.org/pdf/1907.01341v2) in appendix B:
 
 For the scale- and shift-invariant MSE we need to solve \
 
+
 $$
 
 
@@ -81,35 +82,14 @@ $$
     (s, t) = \arg \min_{s,t} \sum_{i=1}^{M} \left( s d_i + t - d_i^* \right)^2 \tag{12}
 \end{equation} 
 
-$$ \
+
+\vec{d}_i = \begin{pmatrix} d_i \\ 1 \end{pmatrix}^\top \quad \text{and} \quad \mathbf{h} = \begin{pmatrix} s \\ t \end{pmatrix}^\top.
 
 
-To align the prediction to the ground truth. Let \
-
-$$
-
-
-\[
-    \vec{d}_i = \begin{pmatrix} d_i \\ 1 \end{pmatrix}^\top \quad \text{and} \quad \mathbf{h} = \begin{pmatrix} s \\ t \end{pmatrix}^\top.
-\]
-
-$$ \
-
-
-We can rewrite (12) as \
-
-$$
 
 \begin{equation}
     \mathbf{h}^{\text{opt}} = \arg \min_{\mathbf{h}} \sum_{i=1}^{M} \left( \vec{d}_i^\top \mathbf{h} - d_i^* \right)^2, \tag{13}
 \end{equation}
-
-$$ \
-
-
-which has the closed-form solution \
-
-$$
 
 
 \begin{equation}
@@ -118,8 +98,8 @@ $$
 
 
 
+$$
 
-$$ \
 
 
 The [function](https://gist.github.com/ranftlr/45f4c7ddeb1bbb88d606bc600cab6c8d) for computing scale and shift is given by the MiDaS Author Rene Ranftl ()
