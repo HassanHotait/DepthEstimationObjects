@@ -62,20 +62,57 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 This page displays a live Rerun web viewer that is running on a server.
 
 <!-- Embed the Rerun viewer using an iframe -->
-<iframe src="http://localhost:9090?url=ws://localhost:9877" width="140%" height="600" frameborder="-10" allowfullscreen></iframe>
+<iframe src="http://localhost:9090?url=ws://localhost:9877" width="120%" height="600" frameborder="0" allowfullscreen></iframe>
 
-> Make sure the Rerun server is running and accessible at the provided URL.
+# Relative to Metric Depth Conversion
+
+As described in the paper in appendix B:
+
+$$
+
+For the scale- and shift-invariant MSE we need to solve
+\begin{equation}
+    (s, t) = \arg \min_{s,t} \sum_{i=1}^{M} \left( s d_i + t - d_i^* \right)^2 \tag{12}
+\end{equation}
+to align the prediction to the ground truth. Let
+\[
+    \vec{d}_i = \begin{pmatrix} d_i \\ 1 \end{pmatrix}^\top \quad \text{and} \quad \mathbf{h} = \begin{pmatrix} s \\ t \end{pmatrix}^\top.
+\]
+We can rewrite (12) as
+\begin{equation}
+    \mathbf{h}^{\text{opt}} = \arg \min_{\mathbf{h}} \sum_{i=1}^{M} \left( \vec{d}_i^\top \mathbf{h} - d_i^* \right)^2, \tag{13}
+\end{equation}
+which has the closed-form solution
+\begin{equation}
+    \mathbf{h}^{\text{opt}} = \left( \sum_{i=1}^{M} \vec{d}_i \vec{d}_i^\top \right)^{-1} \left( \sum_{i=1}^{M} \vec{d}_i d_i^* \right). \tag{14}
+\end{equation}
+
+$$
 
 
+```python
+def compute_scale_and_shift(prediction, target, mask):
+        # system matrix: A = [[a_00, a_01], [a_10, a_11]]
+        a_00 = torch.sum(mask * prediction * prediction, (1, 2))
+        a_01 = torch.sum(mask * prediction, (1, 2))
+        a_11 = torch.sum(mask, (1, 2))
 
+        # right hand side: b = [b_0, b_1]
+        b_0 = torch.sum(mask * prediction * target, (1, 2))
+        b_1 = torch.sum(mask * target, (1, 2))
 
-## How to Use
+        # solution: x = A^-1 . b = [[a_11, -a_01], [-a_10, a_00]] / (a_00 * a_11 - a_01 * a_10) . b
+        x_0 = torch.zeros_like(b_0)
+        x_1 = torch.zeros_like(b_1)
 
-To visualize your data:
-1. Start the Rerun server using the following command:
-   ```bash
-   rerun --serve
+        det = a_00 * a_11 - a_01 * a_01
+        # A needs to be a positive definite matrix.
+        valid = det > 0
 
-http://localhost:9090?url=ws://localhost:9877
+        x_0[valid] = (a_11[valid] * b_0[valid] - a_01[valid] * b_1[valid]) / det[valid]
+        x_1[valid] = (-a_01[valid] * b_0[valid] + a_00[valid] * b_1[valid]) / det[valid]
+
+        return x_0, x_1
+```
 
 
