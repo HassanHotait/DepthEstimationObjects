@@ -30,8 +30,11 @@ Since we are interested in evaluating the objects depth we use the 3D Object Det
 
 [KITTI Depth Estimation Dataset](https://www.cvlibs.net/datasets/kitti/eval_depth_all.php) \
 [KITTI 3D Object Detection Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) \
+
+$$\textbf{KITTI Depth Estimation Dataset:}$$\\
+
 $$
-\textbf{KITTI Depth Estimation Dataset:} \\
+
 \text{Training Set: } D_{\text{train}} = 85898 \text{ Images}\\
 \text{Validation Set: } D_{\text{val}} = 6852 \text{ Images}\\
 \text{Total Images: } D = D_{\text{train}} \cup D_{\text{test}} = 92750 \text{ Images} \\
@@ -43,6 +46,7 @@ $$
 \textbf{Dataset Under Test:} \\
 
 \text{Test Set: } D_{\text{Test}} = (D \setminus D_{\text{EigenTrainSplit}}) \cap D_{\text{train3DObject}} = 4255 \text{ Images} \\
+
 $$
 
 Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZkvvk04XMIMY/view?usp=drive_link)
