@@ -29,7 +29,7 @@ To map the images from the depth estimation set to the 3D object detection one, 
 Since we are interested in evaluating the objects depth we use the 3D Object Detection labels. 
 
 [KITTI Depth Estimation Dataset](https://www.cvlibs.net/datasets/kitti/eval_depth_all.php) \
-[KITTI 3D Object Detection Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) \
+[KITTI 3D Object Detection Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) 
 
 
 $$
@@ -76,28 +76,19 @@ For the scale- and shift-invariant MSE we need to solve \
 
 
 $$
+(s, t) = \arg \min_{s,t} \sum_{i=1}^{M} \left( s d_i + t - d_i^* \right)^2 \tag{12}
+$$
 
-
-\begin{equation}
-    (s, t) = \arg \min_{s,t} \sum_{i=1}^{M} \left( s d_i + t - d_i^* \right)^2 \tag{12}
-\end{equation} 
-
-
+$$
 \vec{d}_i = \begin{pmatrix} d_i \\ 1 \end{pmatrix}^\top \quad \text{and} \quad \mathbf{h} = \begin{pmatrix} s \\ t \end{pmatrix}^\top.
+$$
 
+$$
+\mathbf{h}^{\text{opt}} = \arg \min_{\mathbf{h}} \sum_{i=1}^{M} \left( \vec{d}_i^\top \mathbf{h} - d_i^* \right)^2, \tag{13}
+$$
 
-
-\begin{equation}
-    \mathbf{h}^{\text{opt}} = \arg \min_{\mathbf{h}} \sum_{i=1}^{M} \left( \vec{d}_i^\top \mathbf{h} - d_i^* \right)^2, \tag{13}
-\end{equation}
-
-
-\begin{equation}
-    \mathbf{h}^{\text{opt}} = \left( \sum_{i=1}^{M} \vec{d}_i \vec{d}_i^\top \right)^{-1} \left( \sum_{i=1}^{M} \vec{d}_i d_i^* \right). \tag{14}
-\end{equation}
-
-
-
+$$
+\mathbf{h}^{\text{opt}} = \left( \sum_{i=1}^{M} \vec{d}_i \vec{d}_i^\top \right)^{-1} \left( \sum_{i=1}^{M} \vec{d}_i d_i^* \right). \tag{14}
 $$
 
 
