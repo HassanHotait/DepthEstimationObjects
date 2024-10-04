@@ -53,9 +53,13 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 # Results
 
-<img src="Figures/FVObjectErrorDistribution.png" width="200" style="display:inline-block;"/>
-<img src="Figures/FVMeanErrorVsGT.png" width="200" style="display:inline-block;"/>
-<img src="Figures/FVHist.png" width="200" style="display:inline-block;"/>
+<table>
+  <tr>
+    <td><img src="Figures/FVObjectErrorDistribution.png" width="400"/></td>
+    <td><img src="Figures/FVMeanErrorVsGT.png" width="400"/></td>
+    <td><img src="Figures/FVHist.png" width="400"/></td>
+  </tr>
+</table>
 
 # Rerun Web Viewer Integration
 
