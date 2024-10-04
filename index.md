@@ -66,29 +66,59 @@ This page displays a live Rerun web viewer that is running on a server.
 
 # Relative to Metric Depth Conversion
 
-As described in the paper in appendix B:
+As described in the [paper](https://arxiv.org/pdf/1907.01341v2) in appendix B:
+
+For the scale- and shift-invariant MSE we need to solve
 
 $$
 
-For the scale- and shift-invariant MSE we need to solve
+
 \begin{equation}
     (s, t) = \arg \min_{s,t} \sum_{i=1}^{M} \left( s d_i + t - d_i^* \right)^2 \tag{12}
 \end{equation}
-to align the prediction to the ground truth. Let
+
+$$
+
+
+To align the prediction to the ground truth. Let
+
+$$
+
+
 \[
     \vec{d}_i = \begin{pmatrix} d_i \\ 1 \end{pmatrix}^\top \quad \text{and} \quad \mathbf{h} = \begin{pmatrix} s \\ t \end{pmatrix}^\top.
 \]
+
+$$
+
+
 We can rewrite (12) as
+
+$$
+
 \begin{equation}
     \mathbf{h}^{\text{opt}} = \arg \min_{\mathbf{h}} \sum_{i=1}^{M} \left( \vec{d}_i^\top \mathbf{h} - d_i^* \right)^2, \tag{13}
 \end{equation}
+
+$$
+
+
 which has the closed-form solution
+
+$$
+
+
 \begin{equation}
     \mathbf{h}^{\text{opt}} = \left( \sum_{i=1}^{M} \vec{d}_i \vec{d}_i^\top \right)^{-1} \left( \sum_{i=1}^{M} \vec{d}_i d_i^* \right). \tag{14}
 \end{equation}
 
+
+
+
 $$
 
+
+The [function](https://gist.github.com/ranftlr/45f4c7ddeb1bbb88d606bc600cab6c8d) for computing scale and shift is given by the MiDaS Author Rene Ranftl ()
 
 ```python
 def compute_scale_and_shift(prediction, target, mask):
