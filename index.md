@@ -56,6 +56,12 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 # Results
 
+| AbsRel | Column 2 |
+|----------|----------|
+| Pixel Eval   | 0.12    |
+| Object Center Eval    | 0.26    |
+| Object Mean Eval   | 0.21   |
+
 <table>
   <tr>
     <td><img src="Figures/FVObjectErrorDistribution.png" width="800"/></td>
@@ -64,15 +70,6 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
   </tr>
 </table>
 
-<div style="text-align: center;">
-
-| AbsRel | Column 2 |
-|----------|----------|
-| Pixel Eval   | 0.12    |
-| Object Center Eval    | 0.26    |
-| Object Mean Eval   | 0.21   |
-
-</div>
 
 # Rerun Web Viewer Integration
 
