@@ -58,12 +58,13 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 <table>
   <tr>
-    <td><img src="Figures/FVObjectErrorDistribution.png" width="800" height="500"/></td>
-    <td><img src="Figures/FVMeanErrorVsGT.png" width="800" height="500"/></td>
-    <td><img src="Figures/FVHist.png" width="800" height="500"/></td>
+    <td><img src="Figures/FVObjectErrorDistribution.png" width="800"/></td>
+    <td><img src="Figures/FVMeanErrorVsGT.png" width="800" /></td>
+    <td><img src="Figures/FVHist.png" width="800"/></td>
   </tr>
 </table>
 
+<div style="text-align: center;">
 
 | AbsRel | Column 2 |
 |----------|----------|
@@ -71,6 +72,7 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 | Object Center Eval    | 0.26    |
 | Object Mean Eval   | 0.21   |
 
+</div>
 
 # Rerun Web Viewer Integration
 
