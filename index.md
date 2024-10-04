@@ -7,6 +7,12 @@ title: Rerun Web Viewer
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
+# Project Goal
+
+The purpose of this project is to investigate whether or not MIDAS can be used to predict the depth of objects in the KITTI dataset. \
+Since MiDas predicts relative depth, we assume that we are able to do the conversion from relative to metric depth given the groundtruth measurements.
+
+
 # Model Under Test
 
 | MiDaS Model          | DIW WHDR | Eth3d AbsRel | Sintel AbsRel | TUM δ1  | KITTI δ1  | NYUv2 δ1 | Imp. % | Par. M | FPS  |
@@ -14,10 +20,7 @@ title: Rerun Web Viewer
 | **Inference height 224** |          |              |               |         |           |           |        |        |      |
 | v3.1 LeViT<sub>224</sub>  | 0.1314   | 0.1206       | 0.31        | 18.21   | 15.27*    | 8.64*     | -40     | 51    | 73  |
 
-# Project Goal
 
-The purpose of this project is to investigate whether or not MIDAS can be used to predict the depth of objects in the KITTI dataset. \
-Since MiDas predicts relative depth, we assume that we are able to do the conversion from relative to metric depth given the groundtruth measurements.
 
 # KITTI Dataset
 
@@ -55,11 +58,21 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 <table>
   <tr>
-    <td><img src="Figures/FVObjectErrorDistribution.png" width="600"/></td>
-    <td><img src="Figures/FVMeanErrorVsGT.png" width="600"/></td>
-    <td><img src="Figures/FVHist.png" width="600"/></td>
+    <td><img src="Figures/FVObjectErrorDistribution.png" width="600" height="500"/></td>
+    <td><img src="Figures/FVMeanErrorVsGT.png" width="600" height="500"/></td>
+    <td><img src="Figures/FVHist.png" width="600" height="500"/></td>
   </tr>
 </table>
+
+<div style="text-align:center;">
+
+| AbsRel | Column 2 |
+|----------|----------|
+| Pixel Eval   | 0.12    |
+| Object Center Eval    | 0.26    |
+| Object Mean Eval   | 0.21   |
+
+</div>
 
 # Rerun Web Viewer Integration
 
