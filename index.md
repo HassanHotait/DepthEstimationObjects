@@ -94,7 +94,7 @@ $$
 
 
 
-The [function](https://gist.github.com/ranftlr/45f4c7ddeb1bbb88d606bc600cab6c8d) for computing scale and shift is given by the MiDaS Author Rene Ranftl ()
+The [function](https://gist.github.com/ranftlr/45f4c7ddeb1bbb88d606bc600cab6c8d) for computing scale and shift is given by the MiDaS Author Rene Ranftl 
 
 ```python
 def compute_scale_and_shift(prediction, target, mask):
