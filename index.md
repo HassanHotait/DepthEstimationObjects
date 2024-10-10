@@ -76,7 +76,9 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 This page displays a live Rerun web viewer that is running on a server.
 
 <!-- Embed the Rerun viewer using an iframe -->
-<iframe src="http://34.67.148.72:9090?url=ws://34.67.148.72:9877" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<!-- Embed the Rerun viewer using ngrok in an iframe -->
+<iframe src="https://a7cd-34-67-148-72.ngrok-free.app?url=ws://34.67.148.72:9877" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+
 
 
 # Relative to Metric Depth Conversion
