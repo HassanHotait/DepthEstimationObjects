@@ -77,12 +77,7 @@ This page displays a live Rerun web viewer that is running on a server.
 
 <!-- Embed the Rerun viewer using an iframe -->
 <!-- Embed the Rerun viewer using ngrok in an iframe -->
-<iframe src="http://34.67.148.72/api/?url=ws://34.67.148.72:9877" 
-        title="Proxy Server" 
-        width="100%" 
-        height="600" 
-        style="border:none;">
-</iframe>
+<iframe src="http://104.198.32.60:9090/?url=ws://104.198.32.60:9877" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
 
 
 
