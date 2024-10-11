@@ -71,13 +71,10 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 </table>
 
 
-# Rerun Web Viewer Integration
+# Demo
 
-This page displays a live Rerun web viewer that is running on a server.
 
-<!-- Embed the Rerun viewer using an iframe -->
-<!-- Embed the Rerun viewer using ngrok in an iframe -->
-<iframe src="http://104.198.32.60:9090/?url=ws://104.198.32.60:9877" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://drive.google.com/file/d/1aRMpz4Wf4AMsRuIdICbQywjCS_2dvCfC/preview" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
 
 
 
