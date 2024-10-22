@@ -109,11 +109,6 @@ def compute_scale_and_shift(prediction, target, mask):
 
 # Results
 
-
-<p align="center">
-  <img src="Figures/ResultsTable.png" width="200"/>
-</p>
-
 <table>
   <tr>
     <td><img src="Figures/FVObjectErrorDistribution.png" width="800"/></td>
@@ -122,12 +117,16 @@ def compute_scale_and_shift(prediction, target, mask):
   </tr>
 </table>
 
+<p align="center">
+  <img src="Figures/ResultsTable.png" width="400"/>
+</p>
+
 ## Object Pixel Eval
 
 Every valid pixel in the mask is evaluated with it's corresponding pixel in the predicted depth map.
 
 <p align="center">
-  <img src="Figures/PixelEval.png" width="200"/>
+  <img src="Figures/PixelEval.png" width="600"/>
 </p>
 
 ## Object Mean Eval
@@ -135,7 +134,7 @@ Every valid pixel in the mask is evaluated with it's corresponding pixel in the 
 Every valid pixel in the 2D bounding box is evaluated with it's corresponding 2D bounding box in the predicted depth map.
 
 <p align="center">
-  <img src="Figures/ObjectMeanEval.png" width="200"/>
+  <img src="Figures/ObjectMeanEval.png" width="600"/>
 </p>
 
 
@@ -144,7 +143,7 @@ Every valid pixel in the 2D bounding box is evaluated with it's corresponding 2D
 Every object center in the valid pixel mask is evaluated with it's corresponding object center in the predicted depth map.
 
 <p align="center">
-  <img src="Figures/ObjectCenterEval.png" width="200"/>
+  <img src="Figures/ObjectCenterEval.png" width="600"/>
 </p>
 
 
