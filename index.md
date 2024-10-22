@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rerun Web Viewer
+title: Objects Depth Estimation With MiDaS
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
@@ -56,11 +56,15 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 # Results
 
+<div align="center">
+
 | AbsRel | Column 2 |
 |----------|----------|
 | Pixel Eval   | 0.12    |
 | Object Center Eval    | 0.26    |
 | Object Mean Eval   | 0.21   |
+
+</div>
 
 <table>
   <tr>
