@@ -63,6 +63,9 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 | Object Center Eval    | 0.26    |
 | Object Mean Eval   | 0.21   |
 
+<p align="center">
+  <img src="Figures/ResultsTable.png" width="800"/>
+</p>
 
 <table>
   <tr>
