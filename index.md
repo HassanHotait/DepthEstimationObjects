@@ -121,11 +121,6 @@ def compute_scale_and_shift(prediction, target, mask):
   <img src="Figures/ResultsTable.png" width="400"/>
 </p>
 
-| Eval | AbsRel |
-|----------|----------|
-| Pixel Eval   | 0.12    |
-| Object Center Eval    | 0.26    |
-| Object Mean Eval   | 0.21   |
 
 ## Object Pixel Eval
 
