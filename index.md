@@ -56,7 +56,7 @@ Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZk
 
 # Results
 
-<div align="center">
+<div style="text-align: center;">
 
 | AbsRel | Column 2 |
 |----------|----------|
