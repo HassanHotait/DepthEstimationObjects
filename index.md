@@ -124,10 +124,28 @@ def compute_scale_and_shift(prediction, target, mask):
 
 ## Object Pixel Eval
 
+Every valid pixel in the mask is evaluated with it's corresponding pixel in the predicted depth map.
+
+<p align="center">
+  <img src="Figures/PixelEval.png" width="200"/>
+</p>
+
 ## Object Mean Eval
+
+Every valid pixel in the 2D bounding box is evaluated with it's corresponding 2D bounding box in the predicted depth map.
+
+<p align="center">
+  <img src="Figures/ObjectMeanEval.png" width="200"/>
+</p>
 
 
 ## Object Center Eval
+
+Every object center in the valid pixel mask is evaluated with it's corresponding object center in the predicted depth map.
+
+<p align="center">
+  <img src="Figures/ObjectCenterEval.png" width="200"/>
+</p>
 
 
 # Demo
