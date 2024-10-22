@@ -54,35 +54,6 @@ $$
 
 Our test is given [here](https://drive.google.com/file/d/1ITTkj25Jte3Oc1OyrIViZkvvk04XMIMY/view?usp=drive_link)
 
-# Results
-
-
-| AbsRel | Column 2 |
-|----------|----------|
-| Pixel Eval   | 0.12    |
-| Object Center Eval    | 0.26    |
-| Object Mean Eval   | 0.21   |
-
-<p align="center">
-  <img src="Figures/ResultsTable.png" width="800"/>
-</p>
-
-<table>
-  <tr>
-    <td><img src="Figures/FVObjectErrorDistribution.png" width="800"/></td>
-    <td><img src="Figures/DepthErrorVsDepth.png" width="800" /></td>
-    <td><img src="Figures/FVHist.png" width="800"/></td>
-  </tr>
-</table>
-
-
-# Demo
-
-
-<iframe src="https://drive.google.com/file/d/1aRMpz4Wf4AMsRuIdICbQywjCS_2dvCfC/preview" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-
-
-
 # Relative to Metric Depth Conversion
 
 As described in the [paper](https://arxiv.org/pdf/1907.01341v2) in appendix B:
@@ -135,5 +106,41 @@ def compute_scale_and_shift(prediction, target, mask):
 
         return x_0, x_1
 ```
+
+# Results
+
+
+<p align="center">
+  <img src="Figures/ResultsTable.png" width="200"/>
+</p>
+
+<table>
+  <tr>
+    <td><img src="Figures/FVObjectErrorDistribution.png" width="800"/></td>
+    <td><img src="Figures/DepthErrorVsDepth.png" width="800" /></td>
+    <td><img src="Figures/FVHist.png" width="800"/></td>
+  </tr>
+</table>
+
+## Object Pixel Eval
+
+## Object Mean Eval
+
+
+## Object Center Eval
+
+
+# Demo
+
+
+<iframe src="https://drive.google.com/file/d/1aRMpz4Wf4AMsRuIdICbQywjCS_2dvCfC/preview" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+
+
+# Conclusion
+
+
+It is concluded that the per pixel depth estimation of MiDaS is on our dataset is 0.12 which is inline with expectations, however the per object (center) depth estimation is 
+0.25, almost double the error for pixel evaluation. 
+
 
 
